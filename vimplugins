@@ -1,0 +1,53 @@
+/home/abhishek/.vim/
+├── autoload
+│   ├── pathogen.vim
+│   └── plug.vim
+├── bin
+│   ├── cc_args.py
+│   └── generate_kinds.py
+├── bundle
+│   ├── asyncrun.vim
+│   ├── ctrlp.vim
+│   ├── dracula
+│   ├── fzf.vim
+│   ├── gruvbox
+│   ├── indentLine-master
+│   ├── julia-vim
+│   ├── nerdtree
+│   ├── plantuml-syntax
+│   ├── rust.vim
+│   ├── tagbar-master
+│   ├── taglist.vim
+│   ├── vim-airline
+│   ├── vim-airline-themes
+│   ├── vim-colors-solarized
+│   ├── vim-easymotion
+│   ├── vim-fireplace
+│   ├── vim-flake8
+│   ├── vim-fugitive
+│   └── vim-go
+├── clang_complete.vim
+├── doc
+│   └── tags
+├── OmniCppComplete
+│   ├── after
+│   ├── autoload
+│   ├── doc
+│   └── README
+├── plugged
+│   ├── deoplete.nvim
+│   ├── emmet-vim
+│   ├── vim-javascript
+│   ├── vim-jsx
+│   └── YouCompleteMe
+├── plugin
+│   ├── kinds.py
+│   ├── kinds.pyc
+│   ├── libclang.py
+│   ├── __pycache__
+│   └── snippets
+└── sessions
+    ├── la
+    └── sess1
+
+38 directories, 12 files

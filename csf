@@ -1,0 +1,6 @@
+find `pwd`/path1 `pwd`/path2 -regex ".*\.\(c\|h\|hpp\|cc\|cpp\)" -print  | grep -v "unwantedfiles"> cscope.files
+export CSCOPE_DB=`pwd`/cscope.out
+cscope -b -q -k
+#gtags -f cscope.files
+rm tags
+cat cscope.files | xargs ctags -a --c++-kinds=+p --fields=+iaS --extra=+q --languages=c++
