@@ -1,53 +1,269 @@
-/home/abhishek/.vim/
-├── autoload
-│   ├── pathogen.vim
-│   └── plug.vim
-├── bin
-│   ├── cc_args.py
-│   └── generate_kinds.py
-├── bundle
-│   ├── asyncrun.vim
-│   ├── ctrlp.vim
-│   ├── dracula
-│   ├── fzf.vim
-│   ├── gruvbox
-│   ├── indentLine-master
-│   ├── julia-vim
-│   ├── nerdtree
-│   ├── plantuml-syntax
-│   ├── rust.vim
-│   ├── tagbar-master
-│   ├── taglist.vim
-│   ├── vim-airline
-│   ├── vim-airline-themes
-│   ├── vim-colors-solarized
-│   ├── vim-easymotion
-│   ├── vim-fireplace
-│   ├── vim-flake8
-│   ├── vim-fugitive
-│   └── vim-go
-├── clang_complete.vim
-├── doc
-│   └── tags
-├── OmniCppComplete
-│   ├── after
-│   ├── autoload
-│   ├── doc
-│   └── README
-├── plugged
-│   ├── deoplete.nvim
-│   ├── emmet-vim
-│   ├── vim-javascript
-│   ├── vim-jsx
-│   └── YouCompleteMe
-├── plugin
-│   ├── kinds.py
-│   ├── kinds.pyc
-│   ├── libclang.py
-│   ├── __pycache__
-│   └── snippets
-└── sessions
-    ├── la
-    └── sess1
-
-38 directories, 12 files
+/home/abhvarsh/.vim/
+|-- autoload
+|-- bin
+|-- bundle
+|   |-- asyncrun.vim
+|   |   |-- doc
+|   |   `-- plugin
+|   |-- ctrlp.vim
+|   |   |-- autoload
+|   |   |   `-- ctrlp
+|   |   |-- doc
+|   |   `-- plugin
+|   |-- dracula
+|   |   |-- after
+|   |   |   |-- plugin
+|   |   |   `-- syntax
+|   |   |-- autoload
+|   |   |   |-- airline
+|   |   |   |   `-- themes
+|   |   |   `-- lightline
+|   |   |       `-- colorscheme
+|   |   |-- colors
+|   |   `-- doc
+|   |-- fzf.vim
+|   |   |-- autoload
+|   |   |   `-- fzf
+|   |   |       `-- vim
+|   |   |-- bin
+|   |   |-- doc
+|   |   `-- plugin
+|   |-- gruvbox
+|   |   |-- autoload
+|   |   |   |-- airline
+|   |   |   |   `-- themes
+|   |   |   `-- lightline
+|   |   |       `-- colorscheme
+|   |   `-- colors
+|   |-- julia-vim
+|   |   |-- autoload
+|   |   |   `-- julia
+|   |   |-- doc
+|   |   |-- ftdetect
+|   |   |-- ftplugin
+|   |   |-- indent
+|   |   `-- syntax
+|   |-- nerdtree
+|   |   |-- autoload
+|   |   |   `-- nerdtree
+|   |   |-- doc
+|   |   |-- lib
+|   |   |   `-- nerdtree
+|   |   |-- nerdtree_plugin
+|   |   |-- plugin
+|   |   `-- syntax
+|   |-- OmniCppComplete
+|   |   |-- after
+|   |   |   `-- ftplugin
+|   |   |-- autoload
+|   |   |   `-- omni
+|   |   |       |-- common
+|   |   |       `-- cpp
+|   |   `-- doc
+|   |-- plantuml-syntax
+|   |   |-- ftdetect
+|   |   |-- ftplugin
+|   |   |-- indent
+|   |   `-- syntax
+|   |-- rust.vim
+|   |   |-- after
+|   |   |   `-- syntax
+|   |   |-- autoload
+|   |   |-- compiler
+|   |   |-- doc
+|   |   |-- ftdetect
+|   |   |-- ftplugin
+|   |   |-- indent
+|   |   |-- plugin
+|   |   |-- syntax
+|   |   `-- syntax_checkers
+|   |       `-- rust
+|   |-- tagbar-master
+|   |   |-- autoload
+|   |   |   `-- tagbar
+|   |   |       |-- prototypes
+|   |   |       `-- types
+|   |   |-- doc
+|   |   |-- plugin
+|   |   `-- syntax
+|   |-- taglist.vim
+|   |   |-- doc
+|   |   `-- plugin
+|   |-- vim-airline
+|   |   |-- autoload
+|   |   |   `-- airline
+|   |   |       |-- extensions
+|   |   |       |   |-- tabline
+|   |   |       |   |   `-- formatters
+|   |   |       |   `-- wordcount
+|   |   |       |       `-- formatters
+|   |   |       `-- themes
+|   |   |-- doc
+|   |   |-- plugin
+|   |   `-- t
+|   |-- vim-airline-themes
+|   |   |-- autoload
+|   |   |   `-- airline
+|   |   |       `-- themes
+|   |   |-- doc
+|   |   `-- plugin
+|   |-- vim-colors-solarized
+|   |   |-- autoload
+|   |   |-- bitmaps
+|   |   |-- colors
+|   |   `-- doc
+|   |-- vim-easymotion
+|   |   |-- autoload
+|   |   |   |-- EasyMotion
+|   |   |   |   `-- migemo
+|   |   |   `-- vital
+|   |   |       `-- _easymotion
+|   |   |           |-- Data
+|   |   |           |-- HitAHint
+|   |   |           |-- Over
+|   |   |           |   `-- Commandline
+|   |   |           |       `-- Modules
+|   |   |           |-- Palette
+|   |   |           `-- Vim
+|   |   |-- doc
+|   |   |-- plugin
+|   |   `-- t
+|   |-- vim-fireplace
+|   |   |-- autoload
+|   |   |   `-- fireplace
+|   |   |-- doc
+|   |   |-- plugin
+|   |   |   `-- fireplace
+|   |   `-- python
+|   |-- vim-flake8
+|   |   |-- autoload
+|   |   `-- ftplugin
+|   |-- vim-fugitive
+|   |   |-- doc
+|   |   `-- plugin
+|   `-- vim-go
+|       |-- assets
+|       |-- autoload
+|       |   |-- ctrlp
+|       |   |-- fzf
+|       |   |-- go
+|       |   |   |-- lsp
+|       |   |   `-- test-fixtures
+|       |   |       |-- cmd
+|       |   |       |-- complete
+|       |   |       |-- debug
+|       |   |       |   |-- compilerror
+|       |   |       |   `-- debugmain
+|       |   |       |-- def
+|       |   |       |-- fmt
+|       |   |       |   |-- imports
+|       |   |       |   |   `-- vendor
+|       |   |       |   |       `-- gh.com
+|       |   |       |   |           `-- gi
+|       |   |       |   |               `-- foo-logging
+|       |   |       |   `-- src
+|       |   |       |       `-- imports -> ../imports/
+|       |   |       |-- lint
+|       |   |       |   `-- src
+|       |   |       |       |-- foo
+|       |   |       |       |-- lint
+|       |   |       |       `-- vet
+|       |   |       |-- tags
+|       |   |       |-- term
+|       |   |       `-- test
+|       |   |           `-- src
+|       |   |               |-- compilerror
+|       |   |               |-- play
+|       |   |               |   `-- mock
+|       |   |               |-- showname
+|       |   |               |-- testcompilerror
+|       |   |               |-- timeout
+|       |   |               `-- veterror
+|       |   `-- unite
+|       |       `-- sources
+|       |-- compiler
+|       |-- doc
+|       |-- ftdetect
+|       |-- ftplugin
+|       |   |-- go
+|       |   `-- gomod
+|       |-- gosnippets
+|       |   |-- minisnip
+|       |   |-- snippets
+|       |   `-- UltiSnips
+|       |-- indent
+|       |-- plugin
+|       |-- rplugin
+|       |   `-- python3
+|       |       `-- denite
+|       |           `-- source
+|       |-- scripts
+|       |-- syntax
+|       |-- templates
+|       `-- test
+|-- doc
+|-- OmniCppComplete
+|   |-- after
+|   |   `-- ftplugin
+|   |-- autoload
+|   |   `-- omni
+|   |       |-- common
+|   |       `-- cpp
+|   `-- doc
+|-- plugged
+|   |-- deoplete.nvim
+|   |   |-- autoload
+|   |   |   |-- deoplete
+|   |   |   `-- health
+|   |   |-- doc
+|   |   |-- plugin
+|   |   |-- rplugin
+|   |   |   `-- python3
+|   |   |       `-- deoplete
+|   |   |           |-- base
+|   |   |           |   `-- __pycache__
+|   |   |           |-- filter
+|   |   |           |   `-- __pycache__
+|   |   |           |-- __pycache__
+|   |   |           `-- source
+|   |   |               `-- __pycache__
+|   |   `-- test
+|   |       |-- autoload
+|   |       |   `-- deoplete
+|   |       `-- rplugin
+|   |           `-- python3
+|   |               `-- deoplete
+|   |-- emmet-vim
+|   |   |-- autoload
+|   |   |   `-- emmet
+|   |   |       |-- lang
+|   |   |       `-- lorem
+|   |   |-- doc
+|   |   |-- docs
+|   |   |   `-- static
+|   |   |       |-- css
+|   |   |       |-- images
+|   |   |       `-- js
+|   |   `-- plugin
+|   |-- vim-javascript
+|   |   |-- after
+|   |   |   `-- ftplugin
+|   |   |-- compiler
+|   |   |-- extras
+|   |   |-- ftdetect
+|   |   |-- indent
+|   |   `-- syntax
+|   |-- vim-jsx
+|   |   |-- after
+|   |   |   |-- ftplugin
+|   |   |   |-- indent
+|   |   |   `-- syntax
+|   |   `-- ftdetect
+|   `-- vim-sexp
+|       |-- autoload
+|       |-- doc
+|       `-- plugin
+`-- plugin
+    |-- __pycache__
+    `-- snippets
+        `-- __pycache__
