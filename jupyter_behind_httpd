@@ -1,0 +1,35 @@
+# Systemd unit file for daemon sending data to Elastic Search
+[Unit]
+Description=Start Jupyter
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "/usr/local/bin/jupyter lab --no-browser --port=10002"
+User=alanis
+Group=alanis
+Restart=always
+RestartSec=10
+StartLimitInterval=400
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+<Location /PnmSuite/jupyter/>
+    ProxyPass http://localhost:10002/PnmSuite/jupyter/
+    ProxyPassReverse http://localhost:10002/PnmSuite/jupyter/
+    ProxyPreserveHost On
+</Location>
+<Location "/PnmSuite/jupyter/api/kernels">
+    ProxyPass ws://127.0.0.1:10002/PnmSuite/jupyter/api/kernels
+    ProxyPassReverse ws://127.0.0.1:10002/PnmSuite/jupyter/api/kernels
+    ProxyPreserveHost On
+</Location>
+<Location "/PnmSuite/jupyter/terminals">
+    ProxyPass ws://127.0.0.1:10002/PnmSuite/jupyter/terminals
+    ProxyPassReverse ws://127.0.0.1:10002/PnmSuite/jupyter/terminals
+    ProxyPreserveHost On
+</Location>
