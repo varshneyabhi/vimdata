@@ -6,8 +6,8 @@ After=syslog.target network.target
 [Service]
 Type=simple
 ExecStart=/bin/bash -c "/usr/local/bin/jupyter lab --no-browser --port=10002"
-User=alanis
-Group=alanis
+User=username
+Group=groupname
 Restart=always
 RestartSec=10
 StartLimitInterval=400
@@ -18,18 +18,26 @@ WantedBy=multi-user.target
 
 
 
-<Location /PnmSuite/jupyter/>
-    ProxyPass http://localhost:10002/PnmSuite/jupyter/
-    ProxyPassReverse http://localhost:10002/PnmSuite/jupyter/
+<Location /xyz/jupyter/>
+    ProxyPass http://localhost:10002/xyz/jupyter/
+    ProxyPassReverse http://localhost:10002/xyz/jupyter/
     ProxyPreserveHost On
 </Location>
-<Location "/PnmSuite/jupyter/api/kernels">
-    ProxyPass ws://127.0.0.1:10002/PnmSuite/jupyter/api/kernels
-    ProxyPassReverse ws://127.0.0.1:10002/PnmSuite/jupyter/api/kernels
+<Location "/xyz/jupyter/api/kernels">
+    ProxyPass ws://127.0.0.1:10002/xyz/jupyter/api/kernels
+    ProxyPassReverse ws://127.0.0.1:10002/xyz/jupyter/api/kernels
     ProxyPreserveHost On
 </Location>
-<Location "/PnmSuite/jupyter/terminals">
-    ProxyPass ws://127.0.0.1:10002/PnmSuite/jupyter/terminals
-    ProxyPassReverse ws://127.0.0.1:10002/PnmSuite/jupyter/terminals
+<Location "/xyz/jupyter/terminals">
+    ProxyPass ws://127.0.0.1:10002/xyz/jupyter/terminals
+    ProxyPassReverse ws://127.0.0.1:10002/xyz/jupyter/terminals
     ProxyPreserveHost On
 </Location>
+
+
+jupyter lab --generate-config
+jupyter lab password
+
+in config file:
+    "allow_remote_access": true,
+    "base_url": "/xyz/jupyter"
